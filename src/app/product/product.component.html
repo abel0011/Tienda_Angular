@@ -1,0 +1,13 @@
+<h3 appHighlight>{{product.title | uppercase}}</h3>
+<img [src]="product.image" alt="">
+<br>
+<strong>
+{{product.price | currency:'S/.'}}
+</strong>
+<br>
+{{product.description}}
+<br>
+<p>{{today | date:'d/y'}}</p>
+
+<button mat-raised-button color="warn" (click)="addCart()">Agregar al carrito</button>
+<a mat-raised-button color="warn" [routerLink]="['/Products', product.id]">Ver Detalle</a>

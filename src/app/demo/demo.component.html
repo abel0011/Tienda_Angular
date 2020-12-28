@@ -1,0 +1,25 @@
+<input type="text" [(ngModel)]=title>
+{{title}}
+<br><br>
+<input type="number" [(ngModel)]="power">
+{{power | exponential}}
+<br>
+<br>
+<br>
+<div *ngIf="title=== 'nicolas'">
+  esto es n div
+</div>
+<br>
+<button mat-raised-button color="accent" (click)="addItem()">Add Item</button>
+<br>
+<br>
+<ul>
+
+  <li *ngIf="items.length === 0">lista Vacia</li>
+  <li *ngFor="let name of items ;  index as i">
+      {{i}}{{name}}
+      <button mat-raised-button color="warn" (click)="deleteItem(i)">Delete</button>
+  </li>
+
+</ul>
+

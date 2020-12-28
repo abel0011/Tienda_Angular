@@ -1,20 +1,2 @@
-<input type="text" [(ngModel)]=title>
-{{title}}
 
-<br>
-<br>
-<br>
-<div *ngIf="title=== 'nicolas'">
-  esto es n div
-</div>
-<br>
-<button mat-raised-button color="accent" (click)="addItem()">Add Item</button>
-<br>
-<br>
-<ul>
-  <li *ngFor="let name of items ;  index as i">
-      {{i}}{{name}}
-      <button mat-raised-button color="warn" (click)="deleteItem(i)">Delete</button>
-  </li>
-
-</ul>
+<router-outlet></router-outlet>
