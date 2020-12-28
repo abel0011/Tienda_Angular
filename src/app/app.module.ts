@@ -12,11 +12,11 @@ import { DemoComponent } from './demo/demo.component';
 import { SwiperModule } from 'swiper/angular';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductDetailComponent } from './product/components/product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
 import {SharedModule} from  './shared/shared.module';
 import {CoreModule} from './core/core.module';
-import {ProductComponent} from './product/product.component';
+import {ProductModule} from './product/product.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,6 @@ import {ProductComponent} from './product/product.component';
     PageNotFoundComponent,
     ProductDetailComponent,
     LayoutComponent,
-    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +35,8 @@ import {ProductComponent} from './product/product.component';
     MatButtonModule,
     [SwiperModule],
     SharedModule,
-    CoreModule
+    CoreModule,
+    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]
