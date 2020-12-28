@@ -1,6 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { Routes, RouterModule, PreloadAllModules, PreloadingStrategy } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
@@ -17,13 +16,15 @@ const routes: Routes = [
     // pathMatch: 'full',
     children: [
       {
-        path:'',
-        redirectTo:'/Home',
-        pathMatch:'full'
+        path: '',
+        redirectTo: '/Home',
+        pathMatch: 'full'
       },
       {
         path: 'Home',
-        component: HomeComponent
+        //TODO:CREAR UN MODULO DINAMICAMENTE
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)//devuelva el home module
+        // component: HomeComponent
       },
       {
         path: 'Products',
@@ -52,7 +53,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  //TODO: DINAMICAMENTE ESCOGA UNA ESTRATEGIA DE PRECARGA
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
