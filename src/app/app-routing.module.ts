@@ -1,10 +1,10 @@
-import { Component, NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, PreloadingStrategy } from '@angular/router';
-import { ProductsComponent } from './products/products.component';
-import { ContactComponent } from './contact/contact.component';
-import { DemoComponent } from './demo/demo.component';
+// import { ContactComponent } from './contact/components/contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LayoutComponent } from './layout/layout.component';
+// import {AdminModule} from './admin/admin.module';
+// import {DemoModule} from './demo/demo.module';
 import {AdminGuard} from './admin.guard';
 const routes: Routes = [
 
@@ -31,22 +31,29 @@ const routes: Routes = [
         // component: ProductsComponent
         loadChildren: () => import ('./product/product.module').then(m => m.ProductModule)
       },
-      {
-        path: 'Products/:id',
-        // canActivate:[AdminGuard],
-        // component: ProductDetailComponent
-        loadChildren: () => import ('./product/product.module').then(m => m.ProductModule)
-      },
+      // {
+      //   path: 'Products/:id',
+      //   // canActivate:[AdminGuard],
+      //   // component: ProductDetailComponent
+      //   loadChildren: () => import ('./product/product.module')
+      // },
       {
         path: 'Contact',
         //TODO:VA VALIDAR DATOS 
         // canActivate:[AdminGuard],
-        component: ContactComponent
+        // component: ContactComponent
 
       },
       {
         path: 'Demo',
-        component: DemoComponent
+        // component: DemoComponent
+        // loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)//devuelva el home module
+      },
+      
+      {
+        path:'Admin',
+
+        // loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)//devuelva el home module
       },
       {
         path: '**',
