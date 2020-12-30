@@ -1,6 +1,21 @@
-<nav>
-    <a routerLink="/Home" routerLinkActive="active">Home</a>
- 
-    <a routerLink="/Products" routerLinkActive="active">Products</a>
-    <a routerLink="/Contact" routerLinkActive="active">Contact</a>
-</nav>
+<mat-toolbar color="primary">
+    <!-- TODO:CREANDO UNA FILA  -->
+    <mat-toolbar-row>
+        <!-- TODO: ROW PARA QUE ESTEEN DISTANCIADO LOS BOTONES -->
+        <div class="row between-xs middle-xs header-row">
+            <nav>
+
+                <a mat-button color="acent" routerLink="/Home" routerLinkActive="active">Home</a>
+
+                <a mat-button routerLink="/Products" routerLinkActive="active">Products</a>
+                <a mat-button routerLink="/Contact" routerLinkActive="active">Contact</a>
+            </nav>
+            <a mat-raised-button matBadge="4" matBadgeColor="warn">
+            Carrito
+            <span class="material-icons">  shopping_cart </span>
+        </a>
+
+        </div>
+
+    </mat-toolbar-row>
+</mat-toolbar>
