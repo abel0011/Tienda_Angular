@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {DemoComponent} from './components/demo/demo.component';
 import { DemoRoutingModule } from './demo-routing.module';
-
+// utiliza para ng module
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,9 @@ import { DemoRoutingModule } from './demo-routing.module';
   ],
   imports: [
     CommonModule,
-    DemoRoutingModule
+    DemoRoutingModule,
+    FormsModule
+    
   ]
 })
 export class DemoModule { }
