@@ -15,8 +15,9 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { ProductListComponent } from './components/product-list/product-list.component';
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, ],
+  declarations: [ProductFormComponent, NavComponent, ProductListComponent, ],
   imports: [
     CommonModule,
     AdminRoutingModule,
