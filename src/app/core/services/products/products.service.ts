@@ -37,12 +37,17 @@ export class ProductsService {
   
 getAllProducts(){
   // return this.products;
-  return this.http.get<Product[]>('https://platzi-store.herokuapp.com/products/');
+
+  // return this.http.get<Product[]>('https://platzi-store.herokuapp.com/products/');
+  return this.http.get<Product[]>(environment.url_api+'/products/')
 }
+
 
 getProduct(id:string){
   // return this.products.find(item => id == item.id);
-  return this.http.get<Product>(`https://platzi-store.herokuapp.com/products/${id}`)
+
+  // return this.http.get<Product>(`https://platzi-store.herokuapp.com/products/${id}`)
+  return this.http.get<Product>(`${environment.url_api}/products/${id}`)
 }
 
 }
