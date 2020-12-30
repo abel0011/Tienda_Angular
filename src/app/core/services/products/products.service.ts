@@ -56,5 +56,12 @@ createProduct(product:Product){
   return this.http.post(`${environment.url_api}/products/`,product);
 
 }
+updateProduct(id:String,changes:Partial<Product>){
+  return this.http.put(`${environment.url_api}/products/${id}`,changes)
 
+}
+
+deleteProduct(id:string){
+  return this.http.delete(`${environment.url_api}/products/${id}`)
+}
 }
