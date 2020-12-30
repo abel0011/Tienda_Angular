@@ -15,12 +15,9 @@ export class ProductDetailComponent implements OnInit {
   //TODO:MANERA ADECUADA DE RICIBIR DATOS 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      // console.log(params);
-      const id = params.id;
-      // console.log(params.id);
-
-      this.product = this.productservice.getProduct(id);
-      // console.log(product);
+        const id = params.id;
+      this.fetchProduct(id);
+      // this.product = this.productservice.getProduct(id);
     })
 
 
@@ -28,4 +25,12 @@ export class ProductDetailComponent implements OnInit {
 
   }
 
+  fetchProduct(id:string){
+    this.productservice.getProduct(id)
+    .subscribe(product => {
+      console.log(product)
+      this.product = product;
+    })
+
+  }
 }

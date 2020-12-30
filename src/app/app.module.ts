@@ -15,6 +15,9 @@ import {ProductModule} from './product/product.module';
 import {PageNotFoundModule} from './page-not-found/page-not-found.module';
 import {ContactModule} from './contact/contact.module';
 import {DemoModule} from './demo/demo.module';
+// TODO: SERVICIO HTTP 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,9 @@ import {DemoModule} from './demo/demo.module';
     ProductModule,
     PageNotFoundModule,
     ContactModule,
-    DemoModule
+    DemoModule,
+
+    HttpClientModule
 
   ],
   providers: [],

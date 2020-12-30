@@ -1,14 +1,17 @@
-<div>
-    <img [src]="product.image" alt="">
-</div>
-<div>
-    <ul>
-        <li>Nombre: {{product.title}}</li>
+<!-- PARA QUE NO ME MUSTRE ERRORES DE UNDIFINED -->
+<div *ngIf="product">
+    <div>
+        <img [src]="product.image" alt="">
+    </div>
+    <div>
+        <ul>
+            <li>Nombre: {{product.title}}</li>
 
-        <li>Precio{{product.price | currency:'S/.'}}</li>
-        <p>
+            <li>Precio{{product.price | currency:'S/.'}}</li>
+            <p>
 
-            Descriccion{{product.description}}
-        </p>
-    </ul>
+                Descriccion{{product.description}}
+            </p>
+        </ul>
+    </div>
 </div>

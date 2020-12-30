@@ -5,7 +5,7 @@ import {ProductsService} from './services/products/products.service';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   //TODO:GENERANDO PROVIDERS
   providers:[
