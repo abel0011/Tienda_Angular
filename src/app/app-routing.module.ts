@@ -1,7 +1,5 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, PreloadingStrategy } from '@angular/router';
-import { ContactComponent } from './contact/components/contact/contact.component';
-import { DemoComponent } from './demo/components/demo/demo.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdminGuard } from './admin.guard';
 const routes: Routes = [
@@ -45,6 +43,10 @@ const routes: Routes = [
 
     ],
 
+  },
+  {
+    path:'Admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
   {
     path: '**',
