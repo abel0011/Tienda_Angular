@@ -27,26 +27,46 @@ export interface PeriodicElement {
 })
 export class ProductListComponent implements OnInit {
   constructor(private productservice:ProductsService){}
+  pro:any=this.productservice.products;
+  dataSource = this.pro;
   ngOnInit(){
-    this.Listar()
+    // this.productList()
   }
+
    ELEMENT_DATA!:Product[];
-   Listar(){
+   productList(){
     return this.productservice.productList()
+    
   }
-  
+
+
+  deleteProduct(product :any){
+    
+
+
+    console.log(product)
+    this.productservice.delete(product)
+    console.log(product)
+  //   console.log(product)
+  // product =this.productservice.delete(product.id);
+  // console.log(product)
+   
+
+  //   this.productservice.products.forEach((product,index) =>{
+
+  //     // console.log(`${id.id}-`+`${index}`)
+  //     // console.log(id.id)
+
+  //   // this.productservice.products.( id,1)
+  //   console.log(product[index])
+  //   this.productservice.products.splice(product[index],1)
+  //   console.log(product)
+    
+  //   })
+    
+  }
+
   displayedColumns: string[] = ['id', 'name', 'price', 'description','actions'];
-  // products :Listar();
-  // pro:any=[
-  // {
-  //   id:'nuevo',
-  //   title:'price',
-  //   price:1234
-  // }  
-  // ]
-  // displayedColumns: string[] = ['id', 'title', 'price'];
-  //  dataSource = this.pro;
-  // constructor(private productservice:ProductsService) { }
 
 //   ngOnInit(): void {
 //     this.fetchProducts();

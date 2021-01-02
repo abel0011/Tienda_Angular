@@ -4,9 +4,26 @@ nav>a {
 }
 
 nav>a.active {
-    background-color: blue;
+    background-color: #CE3EC8;
+    margin: 10px;
+}
+
+nav {
+    margin: 10px;
+}
+
+.colornav {
+    background-color: #DF9F0A;
 }
 
 .header-row {
     width: 100%;
+}
+
+.spacebutton {
+    margin: 5px;
+}
+
+mat-toolbar {
+    /* position: fixed; */
 }

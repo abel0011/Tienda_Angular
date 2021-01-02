@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Product} from '../../../Product.model';
 import {HttpClient} from '@angular/common/http';
 import {environment} from './../../../../environments/environment';
+import { ThrowStmt } from '@angular/compiler';
 @Injectable({
   providedIn: 'root'
 })
@@ -10,24 +11,24 @@ export class ProductsService {
   constructor(private http: HttpClient) {
 
    }
- products :Product [] =[
+ products :any [] =[
    
     {
-      id:'1',
+      id:1,
       image:'assets/Image/img1.jpeg',
       title:'pibe',
       price:500,
       description:'dorado talla 16'
     },
 {
-      id:'2',
+      id:2,
       image:'assets/Image/img2.jpeg',
       title:'pibe',
       price:500,
       description:'dorado talla 16'
     },
 {
-      id:'3',
+      id:3,
       image:'assets/Image/img3.jpeg',
       title:'pibe',
       price:500,
@@ -68,5 +69,10 @@ updateProduct(id:String,changes:Partial<Product>){
 
 deleteProduct(id:string){
   return this.http.delete(`${environment.url_api}/products/${id}`)
+   
+}
+
+delete(id:number){
+  this.products.splice(id,5)
 }
 }

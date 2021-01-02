@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product}from '../../../Product.model';
 import {ProductsService} from '../../../core/services/products/products.service';
+
 @Component({    
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -28,5 +29,6 @@ clickProduct(id :any){
       this.products=products;
     })
   }
+  
 
 }

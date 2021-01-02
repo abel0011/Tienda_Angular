@@ -2,20 +2,23 @@
     <!-- TODO:CREANDO UNA FILA  -->
     <mat-toolbar-row>
         <!-- TODO: ROW PARA QUE ESTEEN DISTANCIADO LOS BOTONES -->
-        <div class="row between-xs middle-xs header-row">
+        <div class="row between-xs middle-xs header-row ">
             <nav>
+                <a mat-raised-button routerLink="/Home" routerLinkActive="active" class="spacebutton">Home
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                </a>
 
-                <a mat-button color="acent" routerLink="/Home" routerLinkActive="active">Home</a>
+                <a [matMenuTriggerFor]="menu" mat-raised-button routerLink="/Products" routerLinkActive="active" class="spacebutton">Products and Category</a>
+                <mat-menu #menu="matMenu" routerLinkActive="active">
+                    <a routerLink="/Home" mat-menu-item>Botas
+                    </a>
+                </mat-menu>
 
-                <a mat-button routerLink="/Products" routerLinkActive="active">Products</a>
-                <a mat-button routerLink="/Contact" routerLinkActive="active">Contact</a>
+                <a mat-raised-button routerLink="/Contact" routerLinkActive="active" class="spacebutton">Contact</a>
+
+                <a mat-raised-button matBadge="4" matBadgeColor="warn">     Carrito   <span class="material-icons">  shopping_cart </span>        </a>
             </nav>
-            <a mat-raised-button matBadge="4" matBadgeColor="warn">
-            Carrito
-            <span class="material-icons">  shopping_cart </span>
-        </a>
-
+            <a mat-raised-button routerLinkActive="active" class="spacebutton"> <span class="material-icons">                account_circle                </span> </a>
         </div>
-
     </mat-toolbar-row>
 </mat-toolbar>
