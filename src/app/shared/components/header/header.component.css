@@ -24,6 +24,14 @@ nav {
     margin: 5px;
 }
 
-mat-toolbar {
-    /* position: fixed; */
+img {
+    height: auto;
+    width: auto;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.logo {
+    position: relative;
+    top: 15px;
 }

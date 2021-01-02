@@ -8,11 +8,13 @@ import {ProductsComponent} from './components/products/products.component';
 import {ProductDetailComponent} from './components/product-detail/product-detail.component';
 import {SharedModule} from  '../shared/shared.module';
 import {MaterialModule} from '../material/material.module';
+import { MesageComponent } from './components/mesage/mesage.component';
 @NgModule({
   declarations: [
     ProductComponent,
     ProductsComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    MesageComponent
   ],
   imports: [
     CommonModule,

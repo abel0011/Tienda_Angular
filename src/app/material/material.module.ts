@@ -20,7 +20,7 @@ import { MatSortModule } from '@angular/material/sort';
 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-
+import {matSnackBarAnimations, MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -45,7 +45,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatSortModule,
 
     MatMenuModule
-    ,MatProgressBarModule
+    ,MatProgressBarModule,
+    MatSnackBarModule
   ],
   exports:[
     MatButtonModule,
@@ -66,7 +67,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatSortModule,
 
     MatMenuModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }

@@ -5,4 +5,34 @@
     text-align: center;
     bottom: 0;
     position: fixed;
+    height: 80px;
+}
+
+.doc-footer .footer-botton {
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+    width: 100%;
+    font-size: 60%;
+}
+
+.footercontent .footer-logo {
+    /* height: 81px;
+    left: 121px;
+    top: 160px;
+    max-width: 100%; */
+    width: 5%;
+    max-width: 100%;
+    height: 10px;
+    left: 121px;
+}
+
+img {
+    height: auto;
+    width: auto;
+    max-height: 100px;
+    max-width: 100px;
 }

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ProductsService } from '../../../core/services/products/products.service';
 import { Product } from '../../../Product.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MesageComponent } from '../mesage/mesage.component';
+
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
@@ -10,49 +13,52 @@ import { Product } from '../../../Product.model';
 export class ProductDetailComponent implements OnInit {
 
   product!: any;
-  constructor(private route: ActivatedRoute, private productservice: ProductsService) { }
-
+  constructor(private route: ActivatedRoute, private productservice: ProductsService, private _snackBar: MatSnackBar) { }
+  durationInSeconds = 5;
   //TODO:MANERA ADECUADA DE RICIBIR DATOS 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
       this.fetchProduct(id);
-      // this.product = this.productservice.getProduct(id);
+      this.product = this.productservice.getProduct(id);
     })
-
-
-
-
+  }
+  openSnackBar() {
+    this._snackBar.openFromComponent(MesageComponent, {
+      duration: this.durationInSeconds * 1000,
+    });
   }
 
   fetchProduct(id: string) {
-    this.productservice.getProduct(id)
-      .subscribe(product => {
-        console.log(product)
-        this.product = product;
-      })
+    // this.productservice.getProduct(id)
+    //   .subscribe(product => {
+    //     console.log(product)
+    //     this.product = product;
+    //   })
+    this.product = this.productservice.getProduct(id);
+
 
   }
 
   createProduct() {
-    const newProduct: Product = {
-      id: '22',
-      title: 'nuevo producto',
-      image: 'assets/Image/img1.jpg',
-      price: 3000,
-      description: 'bla blaaaaaaaaaaaaaaa'
-    }
-    this.productservice.createProduct(newProduct)
-      .subscribe(product => {
-        console.log(product)
-        this.product = product;
-      })
+    // const newProduct: Product = {
+    //   id: '22',
+    //   title: 'nuevo producto',
+    //   image: 'assets/Image/img1.jpg',
+    //   price: 3000,
+    //   description: 'bla blaaaaaaaaaaaaaaa'
+    // }
+    // this.productservice.createProduct(newProduct)
+    //   .subscribe(product => {
+    //     console.log(product)
+    //     this.product = product;
+    //   })
 
 
   }
 
   updateProduct() {
-    const updateProduc : Partial<Product> = {
+    const updateProduc: Partial<Product> = {
       id: '30',
       title: 'Editado producto',
       image: 'assets/Image/img1.jpeg',
@@ -66,10 +72,12 @@ export class ProductDetailComponent implements OnInit {
       })
   }
 
-  deleteProduct(){
+  deleteProduct() {
     this.productservice.deleteProduct('333')
-    .subscribe(rta => {
-      console.log(rta)
-    })
+      .subscribe(rta => {
+        console.log(rta)
+      })
   }
 }
+
+

@@ -1,23 +1,36 @@
 <!-- PARA QUE NO ME MUSTRE ERRORES DE UNDIFINED -->
-<div *ngIf="product">
-    <div>
-        <img [src]="product.image" alt="">
-    </div>
-    <div>
-        <ul>
-            <li>Nombre: {{product.title}}</li>
+<br>
+<br>
+<br>
+<div class="detail-card">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar>
+                <span class="material-icons">
+                    favorite
+                    </span>
+            </div>
+            <mat-card-title>{{ product.title | uppercase}}</mat-card-title>
+            <mat-card-subtitle>{{product.price | currency:'S/.'}}</mat-card-subtitle>
 
-            <li>Precio{{product.price | currency:'S/.'}}</li>
+        </mat-card-header>
+        <img mat-card-image src="assets/Image/img1.jpeg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
             <p>
-
-                Descriccion{{product.description}}
+                {{product.description}}
             </p>
-        </ul>
-    </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openSnackBar()" aria-label="Show an example snack-bar">LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
 
-    <button (click)="createProduct()">Crear Producto</button>
-    <br>
-    <button (click)="updateProduct()">Actualizar Producto</button>
-    <br>
-    <button (click)="deleteProduct()">Delete Producto</button>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

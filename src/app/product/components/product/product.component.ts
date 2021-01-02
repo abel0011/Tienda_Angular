@@ -14,7 +14,9 @@ export class ProductComponent implements OnInit {
  
   today= new Date();
 @Input () product !:Product;
+
 @Output () productClicked  :EventEmitter <any> = new EventEmitter (); 
+
 addCart(){
   console.log("agregando al carrtio de compras");
   //emitiendo los valores cuado se hace click
