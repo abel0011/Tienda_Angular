@@ -15,25 +15,63 @@ export class ProductsService {
    
     {
       id:1,
-      image:'assets/Image/img1.jpeg',
+
+      image:'assets/Image/products/img1.jpeg',
       title:'pibe',
       price:500,
       description:'dorado talla 16'
     },
 {
       id:2,
-      image:'assets/Image/img2.jpeg',
+      image:'assets/Image/products/img2.jpeg',
       title:'pibe',
       price:500,
       description:'dorado talla 16'
     },
 {
       id:3,
-      image:'assets/Image/img3.jpeg',
+      image:'assets/Image/products/img3.jpeg',
       title:'pibe',
       price:500,
       description:'dorado talla 16'
-    } 
+    },
+{
+      id:4,
+      image:'assets/Image/products/img4.jpeg',
+      title:'pibe',
+      price:500,
+      description:'dorado talla 16'
+    },{
+      id:5,
+      image:'assets/Image/products/img5.jpeg',
+      title:'pibe',
+      price:500,
+      description:'dorado talla 16'
+    },{
+      id:6,
+      image:'assets/Image/products/img6.jpeg',
+      title:'pibe',
+      price:500,
+      description:'dorado talla 16'
+    },{
+      id:7,
+      image:'assets/Image/products/img7.jpeg',
+      title:'pibe',
+      price:500,
+      description:'dorado talla 16'
+    },{
+      id:8,
+      image:'assets/Image/products/img8.jpeg',
+      title:'pibe',
+      price:500,
+      description:'dorado talla 16'
+    },{
+      id:9,
+      image:'assets/Image/products/img9.jpeg',
+      title:'pibe',
+      price:500,
+      description:'dorado talla 16'
+    }
   ];
   
 getAllProducts(){

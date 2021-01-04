@@ -9,12 +9,15 @@ import {ProductDetailComponent} from './components/product-detail/product-detail
 import {SharedModule} from  '../shared/shared.module';
 import {MaterialModule} from '../material/material.module';
 import { MesageComponent } from './components/mesage/mesage.component';
+import { CartComponent } from './components/cart/cart.component';
+
 @NgModule({
   declarations: [
     ProductComponent,
     ProductsComponent,
     ProductDetailComponent,
-    MesageComponent
+    MesageComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,

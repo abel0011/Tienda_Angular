@@ -21,6 +21,7 @@ import { MatSortModule } from '@angular/material/sort';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {matSnackBarAnimations, MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import {matSnackBarAnimations, MatSnackBarModule} from '@angular/material/snack-
     MatMenuModule
     ,MatProgressBarModule,
     MatSnackBarModule
+    ,MatFormFieldModule
   ],
   exports:[
     MatButtonModule,
@@ -68,7 +70,8 @@ import {matSnackBarAnimations, MatSnackBarModule} from '@angular/material/snack-
 
     MatMenuModule,
     MatProgressBarModule,
-    MatSnackBarModule
-  ]
-})
+    MatSnackBarModule ,
+    MatFormFieldModule
+  ] 
+ })
 export class MaterialModule { }
