@@ -22,7 +22,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {matSnackBarAnimations, MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -49,6 +49,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ,MatProgressBarModule,
     MatSnackBarModule
     ,MatFormFieldModule
+    ,ReactiveFormsModule,
   ],
   exports:[
     MatButtonModule,
@@ -71,7 +72,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatMenuModule,
     MatProgressBarModule,
     MatSnackBarModule ,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ReactiveFormsModule
   ] 
  })
 export class MaterialModule { }

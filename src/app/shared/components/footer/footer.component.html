@@ -6,7 +6,7 @@
         </a>
     </div> -->
 
-    <div class="footercontent">
+    <!-- <div class="footercontent">
         <div class="footer-secction about">
         </div>
         <div class="footer-section links">
@@ -17,8 +17,27 @@
     </div>
     <div class="footer-botton">
         &copy; pamys.com | Todos los derechos reservados | 2020
-    </div>
-    <div class="footer-logo">
+    </div> -->
+    <!-- <div class="footer-logo">
         <img src="assets/Image/logo/logo.png" alt="">
+    </div> -->
+
+    <div class="col-xs-12 col-md-4">
+        <div class="box">
+            <h3>Contacto</h3>
+            
+
+            <mat-form-field>
+                <input matInput placeholder="Digite Email"  type="email" [formControl]="emailField">
+
+            </mat-form-field>>
+            <button mat-raised-button (click)="sendMail()" [disabled]="emailField.invalid">enviar</button>
+
+                    <!-- <input type="text" [formControl]="emailField"> -->
+                    <!-- {{emailField.valid}},{{emailField.invalid}} -->
+                    <!-- <button (click)="sendMail()" *ngIf="emailField.valid">enviar</button> -->
+
+        </div>
+
     </div>
 </mat-toolbar>
