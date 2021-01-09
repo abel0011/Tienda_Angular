@@ -24,6 +24,9 @@ import {matSnackBarAnimations, MatSnackBarModule} from '@angular/material/snack-
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {ReactiveFormsModule} from '@angular/forms';
 
+import { MatGridListModule } from '@angular/material/grid-list';
+
+
 @NgModule({
   declarations: [],
   imports: [
@@ -50,6 +53,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatSnackBarModule
     ,MatFormFieldModule
     ,ReactiveFormsModule,
+    MatGridListModule
   ],
   exports:[
     MatButtonModule,
@@ -68,6 +72,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatGridListModule,
 
     MatMenuModule,
     MatProgressBarModule,
