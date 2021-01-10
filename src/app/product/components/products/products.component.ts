@@ -23,12 +23,12 @@ clickProduct(id :any){
   }
 
   fecthProducts(){
-    this.products=this.productservice.products;
-    // this.productservice.getAllProducts()
-    //TODO:SUBSCRIBIRNOS PORQUE ES UN OBSERVABLE PARA OBTENER LAS RESPUESTAS
-    // .subscribe(products =>{
-    //   this.products=products;
-    // })
+    // this.products=this.productservice.products;
+    this.productservice.getAllProducts()
+    // TODO:SUBSCRIBIRNOS PORQUE ES UN OBSERVABLE PARA OBTENER LAS RESPUESTAS
+    .subscribe(products =>{
+      this.products=products;
+    })
   }
   
 
