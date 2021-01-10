@@ -25,6 +25,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {ReactiveFormsModule} from '@angular/forms';
 
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatSnackBarModule
     ,MatFormFieldModule
     ,ReactiveFormsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatStepperModule
   ],
   exports:[
     MatButtonModule,
@@ -78,7 +80,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatProgressBarModule,
     MatSnackBarModule ,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatStepperModule
   ] 
  })
 export class MaterialModule { }

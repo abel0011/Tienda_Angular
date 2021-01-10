@@ -1,0 +1,24 @@
+<br>
+<br>
+<br>
+<mat-horizontal-stepper>
+
+    <mat-step>
+        <ng-template matStepLabel> PRODUCTOS</ng-template>
+        <!-- TODO:SE SUBSCRIBA SOLO UNA VEZ Y ME CREE UNA VARIABLE TEMPORAL -->
+        <div *ngIf="(products$ |async) as products">
+            <p *ngIf="products.length === 0">NO PRODUCTOS INGRESADOS</p>
+            <ul>
+                <li *ngFor="let product of products">{{product.title}}</li>
+            </ul>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel> DATOS PERSONALES </ng-template>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel> Pago </ng-template>
+    </mat-step>
+
+
+</mat-horizontal-stepper>

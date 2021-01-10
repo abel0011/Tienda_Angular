@@ -15,7 +15,7 @@
                 <a mat-raised-button routerLink="/Products" routerLinkActive="active" class="spacebutton">Productos </a>
 
 
-                <a mat-raised-button [matBadge]="total$ | async" matBadgeColor="warn" routerLink="/Products/Cart">     Carrito   <span class="material-icons">  shopping_cart </span>        </a>
+                <a routerLink="/Order" mat-raised-button [matBadge]="total$ | async" matBadgeColor="warn" >     Carrito   <span class="material-icons">  shopping_cart </span>        </a>
 
                 <button mat-raised-button [matMenuTriggerFor]="menu" color="accent" class="spacebutton">Categorias</button>
                 <mat-menu #menu="matMenu">
