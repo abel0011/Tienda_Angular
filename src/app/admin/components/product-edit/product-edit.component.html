@@ -1,0 +1,40 @@
+<form [formGroup]="form" (ngSubmit)="saveProduct($event)">
+
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Producto
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <mat-label>Title</mat-label>
+                        <input matInput formControlName="title" placeholder="Digite id" type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <mat-label>Price</mat-label>
+                        <input matInput formControlName="price" placeholder="Digite id" type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Description</mat-label>
+                        <textarea matInput fromControlName="description" placeholder="Ingrese description"></textarea>
+                      </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button   >Save</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

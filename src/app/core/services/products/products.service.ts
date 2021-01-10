@@ -88,8 +88,8 @@ productList(){
 }
 
 getProduct(id:string){
-  return this.products.find(item => id == item.id);
-  // return this.http.get<Product>(`${environment.url_api}/products/${id}`)
+  // return this.products.find(item => id == item.id);
+  return this.http.get<Product>(`${environment.url_api}/products/${id}`)
 }
 
 createProduct(product:Product){
