@@ -17,6 +17,10 @@ import {DemoModule} from './demo/demo.module';
 // TODO: SERVICIO HTTP 
 import {HttpClientModule} from '@angular/common/http';
 
+import {AngularFireModule} from '@angular/fire';
+import { environment } from 'src/environments/environment';
+// import  {AngularFireAuth} from '@angular/fire/auth';
+// import {AngularFireStorage} from '@angular/fire/storage';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,8 +40,10 @@ import {HttpClientModule} from '@angular/common/http';
     ContactModule,
     DemoModule,
 
-    HttpClientModule
-
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireAuth,
+    // AngularFireStorage
   ],
   providers: [],
   bootstrap: [AppComponent]

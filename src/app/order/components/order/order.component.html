@@ -9,7 +9,7 @@
         <div *ngIf="(products$ |async) as products">
             <p *ngIf="products.length === 0">NO PRODUCTOS INGRESADOS</p>
             <ul>
-                <li *ngFor="let product of products">{{product.title}}</li>
+                <li *ngFor=" let product of products">{{product.title}}</li>
             </ul>
         </div>
     </mat-step>
