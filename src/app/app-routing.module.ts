@@ -53,7 +53,7 @@ const routes: Routes = [
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
   {
-    path:'Register',
+    path:'Auth',
     loadChildren:()=> import('./auth/auth.module').then(m =>m.AuthModule)
   },  
   {

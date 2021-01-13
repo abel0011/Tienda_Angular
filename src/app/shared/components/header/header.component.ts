@@ -14,7 +14,9 @@ export class HeaderComponent implements OnInit {
 // total=0;
 total$!:Observable<number>;
 
-  constructor(private cartservice:CartService) { 
+  constructor(private cartservice:CartService,
+    
+    ) { 
     this.total$= this.cartservice.cart$
     .pipe(
       map(product =>product.length)

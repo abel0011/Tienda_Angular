@@ -11,4 +11,12 @@ export class AuthService {
   createUser(email:string , password:string){
   return    this.angularfireauth.createUserWithEmailAndPassword(email,password);
   }
+
+  login(email: string , password:string){
+    return  this.angularfireauth.signInWithEmailAndPassword(email,password);
+  }
+
+  logaut(){
+    return this.angularfireauth.signOut();
+  }
 }

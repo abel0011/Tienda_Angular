@@ -28,7 +28,7 @@ register(event :Event){
     const value = this.form.value;
     this.auth.createUser(value.email,value.password)
     .then(()=>{
-      this.router.navigate(['/Login']);
+      this.router.navigate(['/Auth/Login']);
     })
   }
   console.log(this.form.value)
