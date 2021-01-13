@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree ,Router} from '@angular/router';
 import { Observable } from 'rxjs';
 //TODO:MAP OBSERVABLE FLUJO DE DATOS CONTINUO
 //TODO: FORMA DE DEBUGEAR TAP 
@@ -12,7 +12,8 @@ import { AuthService } from './core/services/auth/auth.service';
 export class AdminGuard implements CanActivate {
 
   constructor(
-    private AuthService: AuthService
+    private AuthService: AuthService,
+    private router :Router
   ) { }
 
   canActivate(
@@ -24,10 +25,15 @@ export class AdminGuard implements CanActivate {
     //TODO:PIPI (EL VALOR DEL USUARIO TRANSFORMALO)
     return this.AuthService.hasUser().pipe(
       //TODO:GENERAR UNA INTERCEPCION CON EL FLUJO DE DATOS QUE ME PERMITE HACER UNA IMPRESION SIN MUTAR DATOS
-      tap(user=> console.log(user)),
+      // tap(user=> console.log(user)),
 
       // TODO:SI EL USUARIO ES IGUAL A NULO DEVUELVA UN TRUE
-      map(user => user === null ? false : true)
+      map(user => user === null ? false : true),
+      tap(Hasuser =>{
+        if(!Hasuser){
+          this.router.navigate(['/Auth/Login'])
+        }
+      })
     );
   }
 
