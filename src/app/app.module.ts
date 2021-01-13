@@ -19,7 +19,8 @@ import {HttpClientModule} from '@angular/common/http';
 
 import {AngularFireModule} from '@angular/fire';
 import { environment } from 'src/environments/environment';
-// import  {AngularFireAuth} from '@angular/fire/auth';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 // import {AngularFireStorage} from '@angular/fire/storage';
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { environment } from 'src/environments/environment';
 
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    // AngularFireAuth,
+    AngularFireAuthModule,
+    AngularFireStorageModule
     // AngularFireStorage
   ],
   providers: [],

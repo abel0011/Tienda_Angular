@@ -19,7 +19,6 @@ import { RegisterComponent } from './components/register/register.component';
     AdminRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
-    
   ]
 })
 export class AdminModule { }

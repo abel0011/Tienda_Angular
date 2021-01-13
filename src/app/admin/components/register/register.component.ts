@@ -21,8 +21,15 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(event:Event){
+  register(event:Event){
     event.preventDefault();
+    if(this.form.valid){
+      const value = this.form.value;
+      this.authService.createUser(value.email,value.password)
+      .then(()=> {
+        this.router.navigate(['/Auth/Loin'])
+      })
+    }
     console.log(this.form.value)
 
   }
