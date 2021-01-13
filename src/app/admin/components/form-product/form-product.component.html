@@ -37,12 +37,18 @@
                     <mat-form-field appearance="fill">
                         <mat-label>Description</mat-label>
                         <textarea matInput fromControlName="description" placeholder="Ingrese description"></textarea>
-                      </mat-form-field>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <img *ngIf="image$ | async as  image" [src]="image" alt="">
+                    <input type="file" (change)="uploadFile($event)">
                 </div>
             </div>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button   >Save</button>
+            <button mat-raised-button>Save</button>
         </mat-card-actions>
     </mat-card>
 </form>
