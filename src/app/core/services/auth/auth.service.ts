@@ -19,4 +19,16 @@ export class AuthService {
   logaut(){
     return this.angularfireauth.signOut();
   }
+
+  //TODO: TENEMOS UN USUARIO?
+  hasUser(){
+    ///TODO:RETORNANDO OBSERVABLE
+  return    this.angularfireauth.authState
+
+    // .subscribe(user =>{
+    //   //TODO:SI USER ES IGUAL A NULO SIG QUE NO HAY USARIO
+    //   console.log(user==null);
+
+    // })
+  }
 }
